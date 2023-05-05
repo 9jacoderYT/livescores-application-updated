@@ -15,6 +15,7 @@ import SerieA from "./components/standings/serieA";
 import Laliga from "./components/standings/laliga";
 import Bundesliga from "./components/standings/bundesliga";
 import Ligue from "./components/standings/ligue";
+import Team from "./components/standings/team/team";
 
 function App() {
   const [fixtures, setFixtures] = useState([]);
@@ -27,8 +28,6 @@ function App() {
     const italy = test.response.filter((match) => {
       return match.country.name === "Spain";
     });
-
-    console.log(italy);
 
     setFixtures(data);
   };
@@ -55,7 +54,7 @@ function App() {
 
   return (
     <>
-      <div className="w-full md:w-[700px] lg:w-[800px] m-auto">
+      <div className="w-full md:w-[700px] lg:w-[800px] m-auto h-screen">
         <NavBar onOpen={showPopUpHandler} onClose={hidePopUpHandler} />
 
         {popUp && <Modal onClose={hidePopUpHandler} />}
@@ -86,6 +85,7 @@ function App() {
                 path="/fixture/:matchID"
                 element={<Fixture data={fixtures} />}
               ></Route>
+              <Route path="/team/:teamID/:leagueID" element={<Team />}></Route>
             </Routes>
           </BrowserRouter>
         )}

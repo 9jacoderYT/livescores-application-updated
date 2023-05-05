@@ -29,7 +29,7 @@ export default function Ligue() {
   console.log(teams);
   return (
     <div>
-      <Table clubs={teams} league="LIGUE 1" />
+      <Table clubs={teams} league="LIGUE 1" leagueID={61} />
     </div>
   );
 }

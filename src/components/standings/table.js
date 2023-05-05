@@ -1,7 +1,7 @@
 import React from "react";
 import TableTr from "./tableTr";
 
-export default function Table({ clubs, league }) {
+export default function Table({ clubs, league, leagueID }) {
   return (
     <div className="overflow-x-auto p-2 z-0">
       <table className="table table-compact w-full">
@@ -18,7 +18,7 @@ export default function Table({ clubs, league }) {
         </thead>
         <tbody>
           {clubs.map((club) => (
-            <TableTr club={club} />
+            <TableTr club={club} leagueID={leagueID} />
           ))}
         </tbody>
       </table>

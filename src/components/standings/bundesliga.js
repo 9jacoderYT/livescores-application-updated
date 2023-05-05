@@ -29,7 +29,7 @@ export default function Bundesliga() {
   console.log(teams);
   return (
     <div>
-      <Table clubs={teams}  league="BUNDESLIGA" />
+      <Table clubs={teams} league="BUNDESLIGA" leagueID={78} />
     </div>
   );
 }

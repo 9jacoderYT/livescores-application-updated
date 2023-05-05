@@ -29,7 +29,7 @@ export default function SerieA() {
   console.log(teams);
   return (
     <div>
-      <Table clubs={teams} league="SERIE A" />
+      <Table clubs={teams} league="SERIE A" leagueID={135} />
     </div>
   );
 }

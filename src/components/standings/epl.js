@@ -29,7 +29,7 @@ export default function EPL() {
   console.log(teams);
   return (
     <div>
-      <Table clubs={teams} league="PREMIER LEAGUE" />
+      <Table clubs={teams} league="PREMIER LEAGUE" leagueID={39} />
     </div>
   );
 }

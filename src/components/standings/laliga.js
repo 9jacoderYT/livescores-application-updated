@@ -29,7 +29,7 @@ export default function Laliga() {
   console.log(teams);
   return (
     <div>
-      <Table clubs={teams} league="LA LIGA" />
+      <Table clubs={teams} league="LA LIGA" leagueID={140} />
     </div>
   );
 }
